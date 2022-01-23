@@ -15,5 +15,5 @@ All about our Dogs and us on our coding Journey. This website
 ![](pictures/ERD-Diagram.png)
 
 ## RESTful Routes
-![](pictures/Code-PAL-Route-Table.png)
+<img src="pictures/Code-PAL-Route-Table.png" width='200'/>
 
