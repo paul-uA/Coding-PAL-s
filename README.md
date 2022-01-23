@@ -1,18 +1,18 @@
 # Coding-PAL-s
-### About out Website
+## About out Website
 All about our Dogs and us on our coding Journey. This website 
 
-### Wireframe
+## Wireframe
 ![](pictures/wireFrameCodingPal.png)
 
-### User Stories
+## User Stories
 
-### MVP Goal List
+## MVP Goal List
 
-### Stretch Goals
+## Stretch Goals
 
-### Database ERD Diagram
+## Database ERD Diagram
 
-### RESTful Routes
+## RESTful Routes
 ![](pictures/Code-PAL-Route-Table.png)
 
