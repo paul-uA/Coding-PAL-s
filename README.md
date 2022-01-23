@@ -1,6 +1,6 @@
 # Coding-PAL-s
 ## About out Website
-All about our Dogs and us on our coding Journey. This website 
+All about our Dogs and us on our coding Journey. 
 
 ## Wireframe
 ![](pictures/wireFrameCodingPal.png)
