@@ -12,6 +12,7 @@ All about our Dogs and us on our coding Journey. This website
 ## Stretch Goals
 
 ## Database ERD Diagram
+![](pictures/ERD-Diagram.png)
 
 ## RESTful Routes
 ![](pictures/Code-PAL-Route-Table.png =250x250)
