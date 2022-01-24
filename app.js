@@ -1,5 +1,4 @@
 // Dependencies
-const { resolveNaptr } = require('dns')
 const express =require('express')
 const { METHODS } = require('http')
 
@@ -11,7 +10,7 @@ const URI = "mongodb://127.0.0.1:27017/"
 const methodOverride = require('method-override')
 
 // const owner = require('.models/Owners.js')
-const dogs = require('./models/Dogs')
+const owners = require('./models/Owners')
 
 mongoose.connect(URI,()=>console.log('mongoose connected'))
 
@@ -29,47 +28,44 @@ app.use(express.static('public'))
 
 
 // "Index" Route
-app.get('/Dogs',(req, res) => {
-    dogs.find({}, (err, dogsDB) =>{
-      res.render("index.ejs", {dog:dogsDB})  
-    })
-
+app.get('/Owners',(req, res) => {
+    res.send("This is the Index Route")
 })
 
 
 
 // "New" Route
-app.get('/Dogs/new', (req, res) => {
+app.get('/Owners/new', (req, res) => {
     res.send("This is the new route")
 })
 
 
 // "Show Route"
-app.get('/Dogs/:id', (req, res) => {
+app.get('/Owners/:id', (req, res) => {
     res.send("This is the show route")
 })
 
 
 // "Edit Route"
-app.get('/Dogs/:id/edit', (req, res) => {
+app.get('/Owners/:id/edit', (req, res) => {
     res.send("This is the edit page")
 })
 
 
 // "Create Route"
-app.post('/Dogs',(req, res) => {
+app.post('/Owners',(req, res) => {
     res.send("This is the create route")
 })
 
 
 // "Destroy Route"
-app.delete('Dogs/:id', (req, res) => {
+app.delete('Owners/:id', (req, res) => {
     res.send("This is the delete route")
 })
 
 
 // "Update Route"
-app.put('/Dogs/:id', (req, res) => {
+app.put('/Owners/:id', (req, res) => {
     res.send("This is the update route")
 })
 

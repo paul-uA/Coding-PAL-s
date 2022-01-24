@@ -9,3 +9,5 @@ const ownersSchema = new mongoose.Schema({
     favoriteDogActivity:[String]
 },{timestamps:true})
 
+const Owners = mongoose.model("Owners", ownersSchema)
+module.exports = Owners
