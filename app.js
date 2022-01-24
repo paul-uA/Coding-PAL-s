@@ -5,6 +5,7 @@ const { METHODS } = require('http')
 const app = express()
 
 const dogsController = require("./controllers/dogsC")
+const ownerController= require("./controllers/ownersC")
 
 const PORT = 3000
 const mongoose = require('mongoose')
@@ -12,7 +13,7 @@ const URI = "mongodb://127.0.0.1:27017/"
 const methodOverride = require('method-override')
 
 // const owner = require('.models/Owners.js')
-const owners = require('./models/Owners')
+// const owners = require('./models/owners')
 
 mongoose.connect(URI,()=>console.log('mongoose connected'))
 
@@ -28,6 +29,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static('public'))
 
 app.use('/dogs', dogsController)
+app.use('/owners', ownerController)
 
 // "Start the server"
 app.listen(PORT, () => {

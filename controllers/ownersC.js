@@ -43,3 +43,5 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     res.send("This is the update route")
 })
+
+module.exports = router
