@@ -1,5 +1,5 @@
 const express = require("express")
-const route = express.Router()
+const router = express.Router()
 const owners = require("../models/Owners")
 
 // "Index" Route

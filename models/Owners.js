@@ -6,7 +6,11 @@ const ownersSchema = new mongoose.Schema({
     },
     hobbies:[String],
     tvShows:[String],
-    favoriteDogActivity:[String]
+    favoriteDogActivity:[String],
+    dogs:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Dogs'
+    }]
 },{timestamps:true})
 
 const Owners = mongoose.model("Owners", ownersSchema)

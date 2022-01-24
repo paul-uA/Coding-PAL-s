@@ -28,6 +28,16 @@ app.use(methodOverride('method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.static('public'))
 
+// redirect from localhost:3000
+app.get('/', (req,res)=>{
+    res.redirect('/Code-Pals')
+})
+
+// our app home page
+app.get('/Code-Pals', (req,res)=>{
+    res.render('home')
+})
+
 app.use('/dogs', dogsController)
 app.use('/owners', ownerController)
 
