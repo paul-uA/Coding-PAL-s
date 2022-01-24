@@ -1,7 +1,10 @@
 // Dependencies
+const { resolveNaptr } = require('dns')
 const express =require('express')
 const { METHODS } = require('http')
+
 const app = express()
+
 const PORT = 5000
 const mongoose = require('mongoose')
 const URI = "mongodb://127.0.0.1:27017/"
