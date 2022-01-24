@@ -4,7 +4,7 @@ Its a website all about our Dogs! Follow us on our coding journey with our dogs.
 
 ## Wireframe
 ![](pictures/wireFrameCodingPal.png)
-The wireframe above gives a generic outline of how navigation of the site should work. The home page introduces the PALS and our pets. The owner's name is followed by the pet's name. If you click the name of the owner you will be taken to their profile to give a short description of who they are and other things.If they click the dogs name they are taken to the dogs page where they can see a picture of the dog and more information about them. If development reaches MVP there will be an accompanying schedule for the pets that shows important dates and activities. Also if we can there will be a login on the home page to add your name to the pals as well as your pet. 
+The wireframe above gives a generic outline of how navigation of the site should work. The home page introduces the PALS and our pets. The owner's name is followed by the pet's name. If you click the name of the owner you will be taken to their profile to give a short description of who they are and other things.If they click the dogs name they are taken to the dogs page where they can see a picture of the dog and more information about them. There will also be a feature to give the dog a bone and “like” the picture. If development reaches MVP there will be an accompanying schedule for the pets that shows important dates and activities. Also if we can there will be a login on the home page to add your name to the pals as well as your pet. 
 
 ## User Stories
 What is Coding PAL's? 
