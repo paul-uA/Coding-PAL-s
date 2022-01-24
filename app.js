@@ -17,31 +17,46 @@ app.use(methodOverride('_method'))
 
 
 // "Index" Route
-
+app.get('/Dogs',(req, res) => {
+    res.send("This is the dog index page")
+})
 
 
 
 // "New" Route
-
+app.get('/Dogs/new', (req, res) => {
+    res.send("This is the new route")
+})
 
 
 // "Show Route"
-
+app.get('/Dogs/:id', (req, res) => {
+    res.send("This is the show route")
+})
 
 
 // "Edit Route"
-
+app.get('/Dogs/:id/edit', (req, res) => {
+    res.send("This is the edit page")
+})
 
 
 // "Create Route"
-
+app.post('/Dogs',(req, res) => {
+    res.send("This is the create route")
+})
 
 
 // "Destroy Route"
-
+app.delete('Dogs/:id', (req, res) => {
+    res.send("This is the delete route")
+})
 
 
 // "Update Route"
+app.put('/Dogs/:id', (req, res) => {
+    res.send("This is the update route")
+})
 
 
 
