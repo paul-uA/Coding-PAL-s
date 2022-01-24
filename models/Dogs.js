@@ -14,3 +14,6 @@ const dogPALSchema = new mongoose.Schema({
         type: Boolean, require
     }
 },{timestamps:true})
+
+const Dogs = mongoose.model("Dogs", dogPALSchema)
+module.exports = Dogs
