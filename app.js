@@ -1,6 +1,8 @@
 // Dependencies
+const { resolveNaptr } = require('dns')
 const express =require('express')
 const { METHODS } = require('http')
+const { supportsColor } = require('supports-color')
 const app = (express)
 const PORT = 5000
 
