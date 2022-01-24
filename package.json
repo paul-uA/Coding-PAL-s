@@ -1,0 +1,26 @@
+{
+  "name": "coding-pal-s",
+  "version": "1.0.0",
+  "description": "Its a website all about our Dogs! Follow us on our coding journey with our dogs. This website will showcase our loving dogs and give a brief insight into who we are.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-uA/Coding-PAL-s.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul-uA/Coding-PAL-s/issues"
+  },
+  "homepage": "https://github.com/paul-uA/Coding-PAL-s#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.7"
+  }
+}
