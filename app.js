@@ -1,11 +1,12 @@
 // Dependencies
-const { resolveNaptr } = require('dns')
 const express =require('express')
 const { METHODS } = require('http')
 
 const app = express()
 
-const PORT = 5000
+const dogsController = require("./controllers/dogsC")
+
+const PORT = 3000
 const mongoose = require('mongoose')
 const URI = "mongodb://127.0.0.1:27017/"
 const methodOverride = require('method-override')
@@ -26,54 +27,7 @@ app.use(methodOverride('method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.static('public'))
 
-
-
-// "Index" Route
-app.get('/Dogs',(req, res) => {
-    dogs.find({}, (err, dogsDB) =>{
-      res.render("index.ejs", {dog:dogsDB})  
-    })
-
-})
-
-
-
-// "New" Route
-app.get('/Dogs/new', (req, res) => {
-    res.send("This is the new route")
-})
-
-
-// "Show Route"
-app.get('/Dogs/:id', (req, res) => {
-    res.send("This is the show route")
-})
-
-
-// "Edit Route"
-app.get('/Dogs/:id/edit', (req, res) => {
-    res.send("This is the edit page")
-})
-
-
-// "Create Route"
-app.post('/Dogs',(req, res) => {
-    res.send("This is the create route")
-})
-
-
-// "Destroy Route"
-app.delete('Dogs/:id', (req, res) => {
-    res.send("This is the delete route")
-})
-
-
-// "Update Route"
-app.put('/Dogs/:id', (req, res) => {
-    res.send("This is the update route")
-})
-
-
+app.use('/dogs', dogsController)
 
 // "Start the server"
 app.listen(PORT, () => {
