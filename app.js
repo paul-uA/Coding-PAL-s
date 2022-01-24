@@ -12,7 +12,7 @@ const URI = "mongodb://127.0.0.1:27017/"
 const methodOverride = require('method-override')
 
 // const owner = require('.models/Owners.js')
-const dogs = require('./models/Dogs')
+const owners = require('./models/Owners')
 
 mongoose.connect(URI,()=>console.log('mongoose connected'))
 
