@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Owners = require('./Owners')
 
 const dogPALSchema = new mongoose.Schema({
     name:{
@@ -12,6 +13,10 @@ const dogPALSchema = new mongoose.Schema({
     },
     fixed:{
         type: Boolean, require
+    },
+    owner_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Owners'
     }
 },{timestamps:true})
 

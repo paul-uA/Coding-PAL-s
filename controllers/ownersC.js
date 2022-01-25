@@ -4,44 +4,44 @@ const owners = require("../models/Owners")
 
 // "Index" Route
 router.get('/',(req, res) => {
-    res.send("This is the Index Route")
+    owners.find({}, (err, ownersDB) => {
+        res.render('./Owner-files/index.ejs', {owner:ownersDB})
 })
-
-
-
+})
 // "New" Route
-router.get('/new', (req, res) => {
-    res.send("This is the new route")
-})
-
-
+// router.get('/new', (req, res) => {
+//     res.render('./Owner-files/new.ejs')
+// })
 // "Show Route"
 router.get('/:id', (req, res) => {
-    res.send("This is the show route")
+    const id= req.params.id
+    owners.findById(id, (err, foundOwner)=> {
+        res.render('./Owner-files/show.ejs', {owner: foundOwner})
+    })
 })
 
 
 // "Edit Route"
-router.get('/:id/edit', (req, res) => {
-    res.send("This is the edit page")
-})
+// router.get('/:id/edit', (req, res) => {
+//     res.send("This is the edit page")
+// })
 
 
 // "Create Route"
-router.post('/',(req, res) => {
-    res.send("This is the create route")
-})
+// router.post('/',(req, res) => {
+//     res.send("This is the create route")
+// })
 
 
 // "Destroy Route"
-router.delete('/:id', (req, res) => {
-    res.send("This is the delete route")
-})
+// router.delete('/:id', (req, res) => {
+//     res.send("This is the delete route")
+// })
 
 
 // "Update Route"
-router.put('/:id', (req, res) => {
-    res.send("This is the update route")
-})
+// router.put('/:id', (req, res) => {
+//     res.send("This is the update route")
+// })
 
 module.exports = router
