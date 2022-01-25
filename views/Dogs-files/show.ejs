@@ -7,17 +7,12 @@
     <title>Show Dogs</title>
 </head>
 <body>
-<<<<<<<< HEAD:views/Dogs-files/show.ejs
+
     <h1>Show Dogs</h1>
-    <p><%=dogs.name%></p>
-    <form method="POST" action="/dogs/<%=dogs._id%>?_method=DELETE">
+    <p><%=dog.name%></p>
+    <form method="POST" action="/dogs/<%=dog._id%>?_method=DELETE">
         <input type="submit" value="delete this dog">
     </form>
-========
-    <h1>Meet **the owner**</h1>
-    <div></div>
-    <!-- <p>Edit Owner</p>
-    <p>Delete Owner</p> -->
->>>>>>>> main:views/Owner-files/show.ejs
+
 </body>
 </html>
