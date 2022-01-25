@@ -5,8 +5,8 @@ const dogs = require ("../models/Dogs")
 
 // "Index" Route
 route.get('/',(req, res) => {
-    dogs.find({}, (err, dogsDB) =>{
-      res.render("index.ejs", {dog:dogsDB})  
+    dogs.find({}, (err, dogsDB) => {
+      res.render("./Dogs-files/index.ejs", {dog:dogsDB})  
     })
 
 })
@@ -14,19 +14,19 @@ route.get('/',(req, res) => {
 
 // "New" Route
 route.get('/new', (req, res) => {
-    res.send("This is the new route")
+    res.render("./Dogs-files/new.ejs")
 })
 
 
 // "Show Route"
 route.get('/:id', (req, res) => {
-    res.send("This is the show route")
+    res.render("./Dogs-files/show.ejs")
 })
 
 
 // "Edit Route"
 route.get('/:id/edit', (req, res) => {
-    res.send("This is the edit page")
+    res.render("./Dogs-files/edit.ejs")
 })
 
 

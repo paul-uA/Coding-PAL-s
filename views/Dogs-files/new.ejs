@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page to add new dogs</title>
+</head>
+<body>
+    <h1>Page to add new dogs</h1>
+    <form action="/dogs" method="POST">
+        <legend>
+            <label>
+                Dog Name: <br/>
+                <input type="text" name="name" required placeholder="(Enter Dog's name)">
+                <br> Dog Age: 
+                <br><input type="text" required placeholder="(Enter dog age)">
+                <br> Dog breed:
+                <br><input type="text" required placeholder="(Enter dog breed)">
+                <br>
+                <br>Dog is fixed:<input name="Dog is Fixed" type="checkbox"/>
+            </label>
+            <br/><br/>
+        </legend>
+        <input type="submit" value="Create Dog">
+    </form>
+</body>
+</html>
