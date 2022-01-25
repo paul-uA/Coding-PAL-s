@@ -9,9 +9,12 @@
 <body>
 
     <h1>Show Dogs</h1>
-    <!-- <p></p>
-    <form method="POST" action="/dogs/?_method=DELETE"> -->
-       
+    <p><%=dogs.name%></p>
+    <form method="POST" action="/dogs/<%=dogs._id%>?_method=DELETE">
+        <input type="submit" value="delete this dog">
+    </form>
+
+
 
 </body>
 </html>
