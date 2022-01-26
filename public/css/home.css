@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://github.com/paul-uA/Coding-PAL-s/blob/6716a83c28457285b770127d658c29dd13f782a5/pictures/Untitled%20design%20(1).png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #79A022;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+}
