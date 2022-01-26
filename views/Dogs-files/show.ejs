@@ -8,13 +8,14 @@
 </head>
 <body>
 
-    <h1>Show Dogs</h1>
-    <p><%=dogs.name%></p>
-    <form method="POST" action="/dogs/<%=dogs._id%>?_method=DELETE">
-        <input type="submit" value="delete this dog">
+    <h1>Show <%=dog.name%></h1>
+    <a href="/dogs/<%=dog.id%>/edit">Edit this dog</a>
+    </div>
+    <hr />
+    <a href="/dogs">Dog Index</a>
+    <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete this dog</button>
     </form>
-
-
-
+    
 </body>
 </html>
