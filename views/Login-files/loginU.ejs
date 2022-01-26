@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Homepage</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <h1>Login to Coding PALs</h1>
+    <section class="auth-wrapper">
+        <div >
+            <h2>Register</h2>
+            <hr>
+            <!-- Put forms here -->
+            <form action="/auth/register" method="post">
+                <p>Username: <input required name='username' type="text"></p>
+                <p>email: <input required name='email' type="text"></p>
+                <p>Password: <input required name='password' type="password" id="passSee"></p>
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <input type="submit" value="create new user">
+            </form>
+        </div>
+        <div>
+            <h2>Login</h2>
+            <hr>
+            <!-- Put Loginforms here -->
+        </div>
+    </section>   
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.auth-wrapper{
+    display: flex;
+    padding: 60px 100px;
+    background-color: rgb(210, 210, 210);
+    justify-content: space-between;
+    min-height: 50vh;
+}
+.auth-wrapper > div{
+    padding: 30px 20px;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    border-radius: 2px;
+    border-right: 5px solid darkgray;
+    border-bottom: 5px solid darkgray;
+    text-align: center;
+}
