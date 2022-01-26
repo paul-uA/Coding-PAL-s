@@ -40,8 +40,11 @@ app.get('/', (req,res)=>{
 })
 
 // our app home page
-app.get('/Code-Pals', (req,res)=>{
-    res.render('home')
+app.get('/Code-Pals',(req, res) => {
+    Owners.find({}, (err, ownerDB) => {
+      res.render("home.ejs", {owner:ownerDB})  
+    })
+
 })
 
 app.use('/dogs', dogsController)
