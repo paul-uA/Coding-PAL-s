@@ -2,6 +2,7 @@
 const express =require('express')
 const { METHODS } = require('http')
 
+
 const app = express()
 
 const dogsController = require("./controllers/dogsC")
@@ -9,13 +10,17 @@ const ownerController= require("./controllers/ownersC")
 
 const PORT = 3000
 const mongoose = require('mongoose')
-const URI = "mongodb://127.0.0.1:27017/"
+const URI = "mongodb://127.0.0.1:27017/dogOwnersDB"
 const methodOverride = require('method-override')
+const Owners = require('./models/Owners')
 
 // const owner = require('.models/Owners.js')
 // const owners = require('./models/owners')
 
-mongoose.connect(URI,()=>console.log('mongoose connected'))
+
+mongoose.connect(URI,()=>{console.log('mongoose connected')})
+
+
 
 // Configuring
 app.set('view engine', 'ejs')
