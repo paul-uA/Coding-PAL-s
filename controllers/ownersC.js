@@ -9,9 +9,9 @@ router.get('/',(req, res) => {
 })
 })
 // "New" Route
-// router.get('/new', (req, res) => {
-//     res.render('./Owner-files/new.ejs')
-// })
+router.get('/new', (req, res) => {
+    res.render('./Owner-files/new.ejs')
+})
 // "Show Route"
 router.get('/:id', (req, res) => {
     const id= req.params.id
