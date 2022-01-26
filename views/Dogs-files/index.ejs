@@ -10,8 +10,11 @@
 <body>
     <h1>Index</h1>
     <% for (let i=0; i <dog.length; i++) { %> 
-        <div> <%= dog[i].name %> 
-            <a href='/Dogs/<%=dog[i]%>'></a>
-    <% } %>    
+        <div> <a href='/dogs/<%=dog[i]._id%>'>
+            <%= dog[i].name %>
+            </a> 
+    <% } %>  
+    <br>
+    <a href = "/dogs/new">Add Dog</a>
 </body>
 </html>
