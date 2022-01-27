@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding PAL's Home</title>
+    <link href="css/ownerIndex.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rammetto+One&display=swap" rel="stylesheet">
+
+    <title>Coding PAL's</title>
 </head>
 <body>
-    <h1>Index</h1>
-<% for (let i=0; i <owner.length; i++) { %> 
-    <div> <a href='/owners/<%=owner[i]._id%>'>
-        <%=owner[i].name %> 
-          </a>
-
-<% } %>    
+    
+        <h1>Coding PAL's</h1>
+ 
+    <div>
+        <% for (let i=0; i <owner.length; i++) { %> 
+        <div class="owner"><a href='/owners/<%=owner[i]._id%>'><%=owner[i].name %></a>
+        <img src="https://www.pinclipart.com/picdir/big/398-3982499_gassi-gehen-clipart-cartoon-dog-on-a-leash.png">
+        </div>
+        <% } %>
+    </div>    
 </body>
 </html>
