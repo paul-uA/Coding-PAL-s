@@ -32,7 +32,7 @@ app.set('view engine', 'ejs')
 
 
 // Middleware
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.static('public'))
 

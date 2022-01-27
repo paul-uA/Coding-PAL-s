@@ -58,11 +58,12 @@ route.post('/',(req, res) => {
 
 // "Destroy Route"
 route.delete('/:id', (req, res) => {
-    const deleteDog = (err,deleteMsg) => {
+    dogs.findByIdAndDelete(req.params.id, (err,deleteMsg) =>{
         console.log(deleteMsg)
-        res.redirect("./dogs")
-    }
-    dogs.findByIdAndDelete(req.params.id, deleteDog)
+        res.redirect("/dogs")
+
+    })
+    
 })
 
 
@@ -73,7 +74,7 @@ route.put('/:id', (req, res) => {
             return res.send(err)
         }
         console.log(updatedDog)
-        res.redirect("./dogs" +req.params.id)
+        res.redirect("/dogs/" +req.params.id)
     })  
 })
 
