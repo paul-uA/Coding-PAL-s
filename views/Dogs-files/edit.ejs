@@ -11,7 +11,7 @@
     <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
         <!--input for fullName-->
         <p>found Dog Id<%=id%></p>
-        <input type="text" name="Name" value="<%=dog.name%>"
+        <input type="text" name="name" value="<%=dog.name%>"
         placeholder="add full name here">
         <!--input for our submit-->
         <input type="submit" value="Edit Dog">
@@ -19,5 +19,6 @@
     <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete this dog</button>
     </form>
+    
 </body>
 </html>
