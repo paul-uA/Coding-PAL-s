@@ -1,18 +1,20 @@
 body {
     background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(1).png?raw=true");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-color: #80CE4F;
 }
 
 img {
-    width: 250px;
-    height: 250px
+    width: 200px;
+    height: 200px
 }
 
 .flex-container {
     display: flex;
     justify-content: center;
+    margin-top: 350px;
+
 }
 
 div {
