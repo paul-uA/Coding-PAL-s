@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-route.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', (req, res) => {
     owners.findById(req.params.id, (err, foundOwner) =>{
     if(err) {
         return res.send(err)
@@ -44,7 +44,7 @@ route.get('/:id/edit', (req, res) => {
 })
 
 // "Create Route"
-route.post('/',(req, res) => {
+router.post('/',(req, res) => {
     owners.create(req.body, (err, createdOwner) => {
         res.redirect("./owners")
     })
