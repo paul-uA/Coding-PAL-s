@@ -1,7 +1,15 @@
-const { response } = require("express")
 const express = require ("express")
 const route = express.Router()
 const dogs = require ("../models/Dogs")
+
+const multer = require('multer')
+const upload = multer()
+
+const cloudinary = require("cloudinary").v2;
+const streamifier = require("streamifier");
+const clConfig = require("../api-config");
+
+cloudinary.config(clConfig);
 
 
 // "Index" Route
@@ -30,6 +38,13 @@ route.get('/:id', (req, res) => {
         res.render("./Dogs-files/show.ejs", {dog:foundDog})
     })
     
+})
+
+// "Edit Route with uploading profile picture"
+route.get('/:id/upload/single-file', (req, res) => {
+    
+    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
+
 })
 
 
