@@ -51,13 +51,13 @@ app.get('/', (req,res)=>{
    
 })
 
-// // our app home page
-// app.get('/Code-Pals',(req, res) => {
-//     Owners.find({}, (err, ownerDB) => {
-//       res.render("home.ejs", {owner:ownerDB})  
-//     })
+// our app home page
+app.get('/Code-Pals',(req, res) => {
+    Owners.find({}, (err, ownerDB) => {
+      res.render("home.ejs", {owner:ownerDB})  
+    })
 
-// })
+})
 
 // // our app login page
 // app.get('/auth',(req, res) => {    

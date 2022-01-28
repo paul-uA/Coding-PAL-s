@@ -12,21 +12,21 @@ img {
     
 }
 
-/* .float-container {
-    border: 3px solid #fff;
-    padding: 20px;
-} */
+.float-container{
+    display: flex;
+    justify-content:  center;
+}
 
 .float-child {
+    display: flex;
     width: 25%;
     float: left;
     padding: 20px;
-    border: 2px solid white;
-    align-items: center;
-    margin: 45px;
-    margin-top: 500px;
-}  
-.content {
+    border: 5px solid white;
+    justify-content: center;
+    margin: 50px;
+    margin-top: 525px;
     text-align: center;
-} 
+}  
+
 
