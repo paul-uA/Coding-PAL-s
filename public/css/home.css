@@ -1,12 +1,32 @@
 body {
-    background-image: url("https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/Coding%20PAL's.png?raw=true");
+    background-image: url("https://github.com/l-Rich/project1-2048/blob/main/WholeBackground.png?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #79A022;
+    background-color: #80CE4F;
+    font-family: 'Poppins', sans-serif;
 }
 
 img {
-    max-width: 200px;
-    max-height: 200px;
-    position: relative;
+    width: 200px;
+    height: 200px;
+    
 }
+
+/* .float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+} */
+
+.float-child {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    border: 2px solid white;
+    align-items: center;
+    margin: 45px;
+    margin-top: 500px;
+}  
+.content {
+    text-align: center;
+} 
+

@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/dogsEdit.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rammetto+One&display=swap" rel="stylesheet">
+
     <title>Edit Dogs</title>
 </head>
 <body>
     <h1>Edit Dogs</h1>
-    <!-- <form action="/dogs-files/?_method=PUT" method="POST"> -->
-
-
+    <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
+        <!--input for fullName-->
+        <p>found Dog Id<%=id%></p>
+        <input type="text" name="name" value="<%=dog.name%>"
+        placeholder="add full name here">
+        <!--input for our submit-->
+        <input type="submit" value="Edit Dog">
+    </form> 
+    <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete this dog</button>
     </form>
+    
 </body>
 </html>

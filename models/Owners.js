@@ -10,7 +10,10 @@ const ownersSchema = new mongoose.Schema({
     dogs:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Dogs'
-    }]
+    }],
+    img:{
+        type: String
+    }
 },{timestamps:true})
 
 const Owners = mongoose.model("Owners", ownersSchema)

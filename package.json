@@ -19,9 +19,14 @@
   "homepage": "https://github.com/paul-uA/Coding-PAL-s#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cloudinary": "^1.28.1",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "method-override": "^3.0.0",
-    "mongoose": "^6.1.7"
+    "mongoose": "^6.1.7",
+    "multer": "^1.4.4",
+    "streamifier": "^0.1.1"
   }
 }

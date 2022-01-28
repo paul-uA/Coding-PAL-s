@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    font-family: 'Rammetto One', cursive;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(3).png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 26px;
+}
+
+div{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+    align-content: space-around
+}
+
+.owner{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+img{
+    
+    height: 250px;
+    width: 250px
+}
+
+"float": (
+    responsive: true,
+    property: float,
+    values: (
+      start: left,
+      end: right,
+      none: none,
+    )
+  ),
+  

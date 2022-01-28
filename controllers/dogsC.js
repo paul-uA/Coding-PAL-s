@@ -13,15 +13,20 @@ route.get('/',(req, res) => {
 })
 
 
+
+
 // "New" Route
 route.get('/new', (req, res) => {
     res.render("./Dogs-files/new.ejs")
+    // res.send("new route")
 })
 
 
 // "Show Route"
 route.get('/:id', (req, res) => {
-    dogs.findById(req.params.id,(err, foundDog) => {
+    const id = req.params.id
+    dogs.findById(id,(err, foundDog) => {
+        console.log(foundDog)
         res.render("./Dogs-files/show.ejs", {dog:foundDog})
     })
     
@@ -30,37 +35,47 @@ route.get('/:id', (req, res) => {
 
 // "Edit Route"
 route.get('/:id/edit', (req, res) => {
-    // dogs.findById(req.params.id, (err, dogToEdit) => {
+    dogs.findById(req.params.id, (err, foundDog) =>{
+    if(err) {
+        return res.send(err)
+    }else{
+        res.render("./dogs-files/edit.ejs",
+        {dog: foundDog, id:req.params.id})
+    }
+})
 
-    // })
-    res.render("./Dogs-files/edit.ejs")
 })
 
 
 // "Create Route"
 route.post('/',(req, res) => {
-    // dogs.create(req.body, (err, newDog) => {
-
-    // })
-    res.send("This is the create route")
+    dogs.create(req.body, (err, createdDog) => {
+        res.redirect("./dogs")
+    })
+    
 })
 
 
 // "Destroy Route"
 route.delete('/:id', (req, res) => {
-    // dogs.findByIdAndDelete(req.params.id, (err,response) => {
+    dogs.findByIdAndDelete(req.params.id, (err,deleteMsg) =>{
+        console.log(deleteMsg)
+        res.redirect("/dogs")
 
-    // })
-    res.send("This is the delete route")
+    })
+    
 })
 
 
 // "Update Route"
 route.put('/:id', (req, res) => {
-    // dogs.findByIdAndUpdate(req.params.id, (err, response) => {
-
-    // })
-    res.send("This is the update route")
+    dogs.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedDog) => {
+        if(err){
+            return res.send(err)
+        }
+        console.log(updatedDog)
+        res.redirect("/dogs/" +req.params.id)
+    })  
 })
 
 module.exports=route
