@@ -17,16 +17,33 @@
             <form action="/auth/register" method="post">
                 <p>Username: <input required name='username' type="text"></p>
                 <p>email: <input required name='email' type="text"></p>
-                <p>Password: <input required name='password' type="password" id="passSee"></p>
-                <input type="checkbox" onclick="myFunction()">Show Password
+                <p>Password: <input required name='password' type="password" id="passWord" ></p>
+                <input type="checkbox" id="passSee">Show Password
                 <input type="submit" value="create new user">
             </form>
         </div>
         <div>
             <h2>Login</h2>
             <hr>
+            <form action="/auth/login" method="post">
+                <p>Username: <input required name='username' type="text"></p>
+                <p>Password: <input required name='password' type="password"></p>
+                <input type="checkbox" >Show Password
+                <input type="submit" value="Login">
+            </form>
             <!-- Put Loginforms here -->
         </div>
-    </section>   
+    </section>  
+    <script>
+        var x = document.getElementById("passSee");
+        x.addEventListener('click',()=>{
+            //console.log(e.target)
+            if (passWord.type === "password") {
+          passWord.type = "text";
+        } else {
+          passWord.type = "password";
+        }
+        })
+      </script> 
 </body>
 </html>
