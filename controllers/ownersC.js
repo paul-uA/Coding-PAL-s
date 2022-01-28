@@ -31,6 +31,12 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// "Edit Route with uploading profile picture"
+router.get('/:id/upload/single-file', (req, res) => {
+    
+    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
+
+})
 
 // "Edit Route"
 router.get('/:id/edit', (req, res) => {
@@ -99,12 +105,6 @@ router.post('/:id/upload', upload.single("imageUpload") ,(req, res) => {
   
 })
 
-// "Edit Route with uploading profile picture"
-router.get('/:id/upload/single-file', (req, res) => {
-    
-    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
-
-})
 
 
 // "Update Route"
