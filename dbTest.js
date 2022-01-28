@@ -34,26 +34,28 @@ const dogInfo=[{
     age: 10,
     breed: 'Pit Lab mix (Pit-ador)',
     fixed: true,
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/DexBaby.jpg?raw=true"
     
 },{
     name: 'Charlie Girl',
     age: 1.5,
     breed: 'Super Mutt',
     fixed: true,
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/IMG_5221.jpg?raw=true"
     
 },{
     name: 'Cayenne',
     age: 4,
     breed: 'Golden Doodle',
     fixed: true,
-    
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/Cayenne.jpg?raw=true"
 
 },{
     name: 'Gabby',
     age: 7,
     breed: 'Portuguese Water Dog',
     fixed: true,
-    
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/Gabby1.jpeg?raw=true"
 }]
 
 
