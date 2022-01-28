@@ -1,23 +1,32 @@
 body {
-    background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(1).png?raw=true");
+    background-image: url("https://github.com/l-Rich/project1-2048/blob/main/WholeBackground.png?raw=true");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-color: #80CE4F;
+    font-family: 'Poppins', sans-serif;
 }
 
 img {
     width: 200px;
-    height: 200px
+    height: 200px;
+    
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 350px;
+/* .float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+} */
 
-}
-
-div {
+.float-child {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    border: 2px solid white;
+    align-items: center;
+    margin: 45px;
+    margin-top: 500px;
+}  
+.content {
     text-align: center;
-    margin: 150px;
-}
+} 
+
