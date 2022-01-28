@@ -33,4 +33,13 @@ img{
     width: 250px
 }
 
-/* margin and padding to fix stylign issues */
+"float": (
+    responsive: true,
+    property: float,
+    values: (
+      start: left,
+      end: right,
+      none: none,
+    )
+  ),
+  
