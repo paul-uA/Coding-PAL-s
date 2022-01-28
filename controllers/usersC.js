@@ -4,6 +4,7 @@ const router = express.Router()
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 
+
 // Auth routing
 
 router.post('/login', (req,res)=>{
@@ -23,7 +24,7 @@ router.post('/login', (req,res)=>{
                 // es.send(testPassword)
                 if(testPassword){
                     console.log('logged in get ready for sessions')
-                    res.send('logged in ' + foundUser)
+                    res.send('logged in ' + foundUser.username)
                 }else{
                     res.send('incorrect password or username')
                 }
@@ -37,14 +38,6 @@ router.post('/register', (req,res)=>{
     const userData = req.body
     const salt = bcrypt.genSaltSync(10)
     const hashedPassword = bcrypt.hashSync(userData.password,salt)
-    function myFunction() {
-        var x = document.getElementById("myInput");
-        if (x.type === "password") {
-          x.type = "text";
-        } else {
-          x.type = "password";
-        }
-      }
     console.log(userData,salt)
 
     userData.password = hashedPassword
