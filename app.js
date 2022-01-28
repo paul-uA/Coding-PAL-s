@@ -40,14 +40,7 @@ app.set('view engine', 'ejs')
 // Middleware
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
-<<<<<<< HEAD
-app.use(express.json());
-app.use(express.static('public'))
-app.use(cors())
-
-=======
 app.use(express.static((__dirname, 'public')));
->>>>>>> 60768836f2e78c642ea90eb5ae2afee2486731d3
 
 // redirect from localhost:3000
 
