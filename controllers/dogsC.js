@@ -42,8 +42,8 @@ route.get('/:id', (req, res) => {
 
 // "Edit Route with uploading profile picture"
 route.get('/:id/single-file', (req, res) => {
-    console.log(req.params)
-    res.render('./Dogs-files/uploadD.ejs', {id: req.params})
+    console.log(req.params.id)
+    res.render('./Dogs-files/uploadD.ejs', {id: req.params.id})
 
 })
 
@@ -97,8 +97,9 @@ route.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
         console.log("req.body")  
         console.log(req.body);
         // This will be the text field data from our form submission - you might use this data for identifiying meta information provided by your upload form
-        console.log('result')  
-        dogs.findByIdAndUpdate(req.params.id,{$push:{img:result.url}},{new:true},(err,foundDog)=>{
+        console.log('result')
+        console.log(result)  
+        dogs.findByIdAndUpdate(oID,{$push:{img:result.url}},{new:true},(err,foundDog)=>{
             if(err){
                 console.log(err)
             res.json(err)
@@ -109,7 +110,7 @@ route.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
               }
         })
         // Result will be resolved value returned by Cloudinary upload promise- you can capture just the properties you want to construct a seeder object to pass to your DB processes.
-        res.redirect(`/:${oID}`)
+        //res.redirect(`/${oID}`)
           } catch (err) {
           console.log(err);
           }

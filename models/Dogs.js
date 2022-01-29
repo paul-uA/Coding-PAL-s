@@ -18,9 +18,7 @@ const dogPALSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Owners'
     },
-    img: [{
-        type: String
-    }]
+    img: [String]
 },{timestamps:true})
 
 const Dogs = mongoose.model("Dogs", dogPALSchema)
