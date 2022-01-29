@@ -31,32 +31,37 @@
         </div>
       </nav>
 
-    <h1>Show <%=dog.name%></h1>
-  
-    <div>
-        <%=dog.age%>
-        
-        <%=dog.breed%>
-        
-        <%=dog.fixed%>
-
-        <img src="<%=dog.img[0]%>">
-        <img src="<%=dog.img[1]%>">
+    <h1><%=dog.name%></h1>  
+    <div class="float-container">
+        <% for (let i=0; i <dog.img.length; i++) { %> 
+    <div class="float-child">
+        <img src="<%=dog.img[i]%>"></div>
+            <%}%> 
+    </div>        
     </div>
+    <div class="dogInfo">
+        Age: <br>  <%=dog.age%><br>
+           
+        Breed: <br>   <%=dog.breed%><br>
+           
+        Is dog fixed?  <br> <%=dog.fixed%>
+       </div> 
     
-    <hr />
+    <div class="buttons2">   
+        <button style="font-size:20px"><a href = "/dogs">Dog's Page</a> <i class="fa fa-paw"></i></button>
+    </div> 
     <div class="buttons1">
         <button style="font-size:20px"><a href = "/dogs/<%=dog.id%>/edit">Edit this dog</a> <i class="fa fa-paw"></i></button>
-        </div>
-    <div class="buttons2">   
-    <button style="font-size:20px"><a href = "/dogs">Dog's Page</a> <i class="fa fa-paw"></i></button>
-    </div> 
+    </div>
     <div class="buttons3">
     <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
         <button style="font-size:20px">Delete this dog <i class="fa fa-paw"></i></button>
     </form>
     </div>
-    <a href="<%=dog._id%>/single-file">Upload Dog Picture</a>
+    <div class="buttons4">
+        <button style="font-size:20px"><a href="<%=dog._id%>/single-file">Upload Dog Picture</a><i class="fa fa-paw"></i></button> 
+    </div>
+    
     <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

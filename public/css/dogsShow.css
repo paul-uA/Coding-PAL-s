@@ -11,6 +11,23 @@ body{
     font-size: 26px;
    
 }
+.dogInfo{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+}
+.float-child {
+    border: 4px solid white;
+    padding: 15px;  
+    background-color: rgba(255, 255, 255, .3);
+    margin-top: 50px;
+}
+.float-container{
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+}
 img{
     display: flex;
     height: 300px;
@@ -58,5 +75,19 @@ img{
     background-color: tomato;
 }
 .buttons3 button:hover{
+    background-color: whitesmoke;
+}
+.buttons4{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-start;
+    width: 1570px;
+}
+.buttons4 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons4 button:hover{
     background-color: whitesmoke;
 }
