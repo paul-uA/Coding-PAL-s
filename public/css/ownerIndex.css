@@ -32,14 +32,4 @@ img{
     height: 250px;
     width: 250px
 }
-
-"float": (
-    responsive: true,
-    property: float,
-    values: (
-      start: left,
-      end: right,
-      none: none,
-    )
-  ),
   

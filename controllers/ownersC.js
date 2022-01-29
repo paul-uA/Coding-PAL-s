@@ -31,24 +31,25 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// "Edit Route with uploading profile picture"
-router.get('/:id/upload/single-file', (req, res) => {
-    
-    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
-
-})
-
-// "Edit Route"
 router.get('/:id/edit', (req, res) => {
-    res.send("This is the edit page")
+    owners.findById(req.params.id, (err, foundOwner) =>{
+    if(err) {
+        return res.send(err)
+    }else{
+        res.render("./Owner-files/edit.ejs",
+        {dog: foundOwner, id:req.params.id})
+    }
 })
 
+})
 
 // "Create Route"
-// router.post('/',(req, res) => {
-    //     res.send("This is the create route")
-// })
-
+router.post('/',(req, res) => {
+    owners.create(req.body, (err, createdOwner) => {
+        res.redirect("./owners")
+    })
+    
+})
 
 // "Destroy Route"
 // router.delete('/:id', (req, res) => {
@@ -57,6 +58,7 @@ router.get('/:id/edit', (req, res) => {
 
     //owner/61f07f99b53db05048310898/upload/single-file
 // "Update with profile picture"
+
 router.post('/:id/upload', upload.single("imageUpload") ,(req, res) => {
     console.log("IM HERE")
     const id = req.params

@@ -3,9 +3,9 @@ const Dogs = require('./models/Dogs')
 const { create } = require('./models/Owners')
 
 
-const mongoURI= 'mongodb://127.0.0.1:27017/dogOwnersDB'
+const MONGODB_URI= process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/dogOwnersDB'
 
-mongoose.connect(mongoURI, () => {
+mongoose.connect(MONGODB_URI, () => {
     console.log('Mongoose has connected to MongoDB')
 })
 
