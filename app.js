@@ -45,8 +45,11 @@ app.use(express.static((__dirname, 'public')));
 // redirect from localhost:3000
 
 app.get('/', (req,res)=>{
+  console.log("something here!!!+++T$TFREGFD GDFG ")
     Owners.find({}, (err, ownerDB) => {
-      if (err) {res.send(err)
+      if (err) {
+        console.error(err)
+        res.send(err)
     }else{
         res.render("home.ejs", {owner:ownerDB})  
       }
