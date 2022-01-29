@@ -4,6 +4,7 @@
   "description": "Its a website all about our Dogs! Follow us on our coding journey with our dogs. This website will showcase our loving dogs and give a brief insight into who we are.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
