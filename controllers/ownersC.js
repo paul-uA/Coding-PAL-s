@@ -32,9 +32,8 @@ router.get('/:id', (req, res) => {
 })
 
 // "Edit Route with uploading profile picture"
-router.get('/:id/upload/single-file', (req, res) => {
-    
-    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
+router.get('/:id/single-file', (req, res) => {
+    res.render('./Owner-files/uploadO.ejs', {id: req.params.id})
 
 })
 
@@ -57,7 +56,7 @@ router.get('/:id/edit', (req, res) => {
 
     //owner/61f07f99b53db05048310898/upload/single-file
 // "Update with profile picture"
-router.post('/:id/upload', upload.single("imageUpload") ,(req, res) => {
+router.post('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
     console.log("IM HERE")
     const id = req.params
     console.log(req.params)
@@ -85,7 +84,7 @@ router.post('/:id/upload', upload.single("imageUpload") ,(req, res) => {
         console.log(req.body);
         // This will be the text field data from our form submission - you might use this data for identifiying meta information provided by your upload form
         console.log('result')  
-        owners.findOneAndUpdate(req.params,{img:result.url},{new:true},(err,foundOwner)=>{
+        owners.findOneAndUpdate({_id:req.params.id},{img:result.url},{new:true},(err,foundOwner)=>{
             if(err){
                 return res.send(err)
             }

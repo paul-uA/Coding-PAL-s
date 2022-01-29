@@ -10,7 +10,7 @@ const app = express()
 const dogsController = require("./controllers/dogsC")
 const ownerController= require("./controllers/ownersC")
 const usersController= require("./controllers/usersC")
-const uploadsController = require('./controllers/uploadsC')
+//const uploadsController = require('./controllers/uploadsC')
 
 const PORT = 3000
 
@@ -66,7 +66,7 @@ app.get('/Code-Pals',(req, res) => {
 // })
 
 app.use('/auth', usersController)
-app.use('/upload',uploadsController)
+// app.use('/upload',uploadsController)
 app.use('/dogs', dogsController)
 app.use('/owners', ownerController)
 

@@ -41,9 +41,9 @@ route.get('/:id', (req, res) => {
 })
 
 // "Edit Route with uploading profile picture"
-route.get('/:id/upload/single-file', (req, res) => {
-    
-    res.render('./ImgUP-files/upload.ejs', {id: req.params.id})
+route.get('/:id/single-file', (req, res) => {
+    console.log(req.params)
+    res.render('./Dogs-files/uploadD.ejs', {id: req.params})
 
 })
 
@@ -68,6 +68,58 @@ route.post('/',(req, res) => {
         res.redirect("./dogs")
     })
     
+})
+
+route.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
+    console.log("IM HERE")
+    const oID = req.params.id
+    //console.log(req.params)
+    let streamUpload = (req) => { return new Promise((resolve, reject) => {
+        let stream = cloudinary.uploader.upload_stream((error, result) => {
+            if (result) {
+                console.log(result);
+            resolve(result);
+          } else {
+            reject(error);
+          }
+        });
+        // our request objects file information is made available through the req.file.buffer
+        streamifier.createReadStream(req.file.buffer).pipe(stream);
+      });
+    };
+    // our initializer for the 'streamUpload process'
+
+    async function upload(req) {
+      try {
+          let result = await streamUpload(req);
+        // the variable result will return the resolved promise's result value (the object we see in our console)
+        // the information from this object can then be made available to other parts of our application (ie Sequelize db methods)
+        console.log("req.body")  
+        console.log(req.body);
+        // This will be the text field data from our form submission - you might use this data for identifiying meta information provided by your upload form
+        console.log('result')  
+        dogs.findByIdAndUpdate(req.params.id,{$push:{img:result.url}},{new:true},(err,foundDog)=>{
+            if(err){
+                console.log(err)
+            res.json(err)
+            }
+            else{
+                console.log(foundDog,"THis is working")
+                res.redirect(`/dogs/${oID}`)
+              }
+        })
+        // Result will be resolved value returned by Cloudinary upload promise- you can capture just the properties you want to construct a seeder object to pass to your DB processes.
+        res.redirect(`/:${oID}`)
+          } catch (err) {
+          console.log(err);
+          }
+        }
+
+    // our synchronous function call that gets the whole process started
+    console.log("button Push")
+
+    upload(req);
+  
 })
 
 
