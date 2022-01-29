@@ -9,7 +9,7 @@ const dogPALSchema = new mongoose.Schema({
         type: Number, require:true,
     },
     breed:{
-        type: String, require:true, default: 1
+        type: String, require:true, default: 'Dog'
     },
     fixed:{
         type: Boolean, require
@@ -18,9 +18,7 @@ const dogPALSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Owners'
     },
-    img: [{
-        type: String
-    }]
+    img: [String]
 },{timestamps:true})
 
 const Dogs = mongoose.model("Dogs", dogPALSchema)

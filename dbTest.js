@@ -14,19 +14,22 @@ const PALSinfo = [{
     hobbies: ['Video Games','Movies','Eating Food'],
     tvShows: ['The Witcher','The Book of Boba Fett','Loki'],
     favoriteDogActivity:['Walking in the park', 'Sleeping','Playing Fetch'],
-    dogs:[]
+    dogs:[],
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/ProfilePaul.jpg?raw=true"
 },{
     name: "Addy",
     hobbies: ['Watcing Tv','Walking around the Park',"Hanging out"],
     tvShows: ['The Great','The Office',"Bob's Burger"],
     favoriteDogActivity:['Walks', 'Playing catch','Going to Astros Games'], 
-    dogs:[] 
+    dogs:[], 
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/Addy_Charlie.jpg?raw=true"
 },{
     name: "Lauren",
     hobbies: ['Crafting','Watching Tv',"Playing the Sims"],
     tvShows: ['Community','The Office',"Archer"],
     favoriteDogActivity:['Playing Ball', 'Belly Rubs','Taking a Ride in the Car'],
-    dogs:[]
+    dogs:[],
+    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/CodingPalLauren.PNG?raw=true"
 }]
 
 const dogInfo=[{

@@ -17,7 +17,7 @@ router.get('/single-file',(req,res)=>{
     res.render('./ImgUP-files/upload.ejs')
 })
 
-router.post("/single-file/:id", upload.single("imageUpload"), function (req, res, next) {
+router.post("/single-file", upload.single("imageUpload"), function (req, res, next) {
   //our uploading function that returns a promise and also streams the inputed files to the cloudinary servers using the streamifier package
   console.log('Start Upload from form', req.params.id)
   const oID = req.params.id
