@@ -42,7 +42,10 @@ router.get('/:id/edit', (req, res) => {
 })
 
 })
+router.get("/owners/:id/upload/single-file", (req, res)=> {
+res.render("./imgUp-files/upload.ejs")
 
+})
 // "Create Route"
 router.post('/',(req, res) => {
     owners.create(req.body, (err, createdOwner) => {
@@ -59,7 +62,7 @@ router.post('/',(req, res) => {
     //owner/61f07f99b53db05048310898/upload/single-file
 // "Update with profile picture"
 
-router.post('/:id/upload', upload.single("imageUpload") ,(req, res) => {
+router.post('/:id/upload/single-file', upload.single("imageUpload") ,(req, res) => {
     console.log("IM HERE")
     const id = req.params
     console.log(req.params)
