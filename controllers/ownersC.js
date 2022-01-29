@@ -50,7 +50,10 @@ router.get('/:id/edit', (req, res) => {
 })
 
 })
+router.get("/owners/:id/upload/single-file", (req, res)=> {
+res.render("./imgUp-files/upload.ejs")
 
+})
 // "Create Route"
 router.post('/',(req, res) => {
     owners.create(req.body, (err, createdOwner) => {
