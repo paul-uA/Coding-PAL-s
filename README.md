@@ -15,13 +15,13 @@ In later interations, we would like to open our website to all of our Purple Lav
 
 ## MVP Goal List
 
-Create models views controllers and other files containers (file structure)
-Have server.js coded and linked decently
-Have routes built and in controllers file
-Have home page designed and linked to other pages properly
-Have dogs show prole page with 1 picture with descriptins
-Have the owner profiles with 1 picture and description
-Have a consistent coding style throughout the project
+- Create models views controllers and other files containers (file structure)
+- Have server.js coded and linked decently
+- Have routes built and in controllers file
+- Have home page designed and linked to other pages properly
+- Have dogs show profile page with 1 picture with descriptins
+- Have the owner profiles with 1 picture and description
+- Have a consistent coding style throughout the project
 
 
 ## Stretch Goals
@@ -39,4 +39,9 @@ Have calendar to see what special activities the dogs have planned
 
 ## RESTful Routes
 <img src="pictures/Code-PAL-Route-Table.png" width='300'/>
+
+## How to navigate our site.
+When you first come to our website you see our homepage. Here you can choose to look into the P.A.L’s you can see who we are and a few things about us. Or you can meet our
+Dogs aka the coding pals. Once you click the like it takes you to the Dogs index page where you can meet our dogs and know more about them and some pictures of them.   
+
 
