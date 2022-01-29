@@ -46,8 +46,11 @@ app.use(express.static((__dirname, 'public')));
 
 app.get('/', (req,res)=>{
     Owners.find({}, (err, ownerDB) => {
+      if (err) {res.send(err)
+    }else{
         res.render("home.ejs", {owner:ownerDB})  
-      })
+      }
+    })
    
 })
 
