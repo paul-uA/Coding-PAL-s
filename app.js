@@ -51,6 +51,7 @@ app.get('/', (req,res)=>{
         console.error(err)
         res.send(err)
     }else{
+      console.log("ATLAS RESPONDED!!!!@ ~#E")
         res.render("home.ejs", {owner:ownerDB})  
       }
     })
