@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rammetto+One&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <title>Page to add new dogs</title>
+    <title>Add a New Dog!</title>
 </head>
 <body>
-    <h1>Page to add new dogs</h1>
+    <h1>Add a New Dog!</h1>
     <form action="/dogs" method="POST">
         <legend>
             <label>
@@ -26,11 +27,15 @@
                 <br>Dog is fixed:<input name="Dog is Fixed" type="checkbox"/>
             </label>
             <br/><br/>
-        <input type="submit" value="Create Dog">
+        <div class="addButton">
+        <button style="font-size:24px">Add Dog! <i class="fa fa-paw"></i></button>
+        </div>
         </legend>
     </form>
     <br>
     <br>
-    <a href = "/dogs"> Back to Dog Index</a>
+    <div class="buttons">
+        <button style="font-size:24px"><a href = "/dogs">Back to Dog Page</a> <i class="fa fa-paw"></i></button>
+        </div>
 </body>
 </html>
