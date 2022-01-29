@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/single-file/<%=id%>" method="post" enctype="multipart/form-data">
+    <form action="/owners/<%=id%>/single-file?_method=PUT" method="post" enctype="multipart/form-data">
         <label for="fileType"> File Name </label>
         <input id="fileType" type="text" name="fileName" />
         <br /><br />

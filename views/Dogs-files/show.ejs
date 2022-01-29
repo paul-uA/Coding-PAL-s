@@ -39,10 +39,13 @@
         
         <%=dog.fixed%>
 
-        <img src="<%=dog.img%>">
+        <img src="<%=dog.img[0]%>">
+        <img src="<%=dog.img[1]%>">
     </div>
     
     <hr />
+    <a href="<%=dog._id%>/single-file">Upload Dog Picture</a>
+    <br>
     <a href="/dogs/<%=dog.id%>/edit">Edit this dog</a>
     <br>
     <a href="/dogs">Dog Index</a>
