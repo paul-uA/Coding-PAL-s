@@ -9,4 +9,25 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 26px;
+    text-align: center;
+}
+.addButton button{
+    background-color: tomato;
+}
+.addButton button:hover{
+    background-color: whitesmoke;
+}
+.buttons{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1580px;
+}
+.buttons button{
+    color: black;
+    background-color: tomato;
+}
+.buttons button:hover{
+    background-color: whitesmoke;
 }
