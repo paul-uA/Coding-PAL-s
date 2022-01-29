@@ -12,11 +12,11 @@ const ownerController= require("./controllers/ownersC")
 const usersController= require("./controllers/usersC")
 //const uploadsController = require('./controllers/uploadsC')
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 
 const mongoose = require('mongoose')
-const URI = "mongodb://127.0.0.1:27017/dogOwnersDB"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/dogOwnersDB"
 const methodOverride = require('method-override')
 
 
@@ -26,7 +26,7 @@ const Owners = require('./models/Owners')
 
 
 
-mongoose.connect(URI,()=>{console.log('mongoose connected')})
+mongoose.connect(MONGODB_URI,()=>{console.log('mongoose connected')})
 
 
 
@@ -45,9 +45,16 @@ app.use(express.static((__dirname, 'public')));
 // redirect from localhost:3000
 
 app.get('/', (req,res)=>{
+  console.log("something here!!!+++T$TFREGFD GDFG ")
     Owners.find({}, (err, ownerDB) => {
+      if (err) {
+        console.error(err)
+        res.send(err)
+    }else{
+      console.log("ATLAS RESPONDED!!!!@ ~#E")
         res.render("home.ejs", {owner:ownerDB})  
-      })
+      }
+    })
    
 })
 
