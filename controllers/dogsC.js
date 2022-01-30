@@ -64,10 +64,46 @@ route.get('/:id/edit', (req, res) => {
 
 // "Create Route"
 route.post('/',(req, res) => {
+    if (req.body.fixed === "on") {
+        req.body.fixed = true;
+      } else {
+        req.body.fixed = false;
+      }
     dogs.create(req.body, (err, createdDog) => {
-        res.redirect("./dogs")
+        if(err) {
+            console.log(err)
+        }else{
+            
+            res.redirect("/dogs")
+
+        }
+        
     })
     
+})
+
+
+
+
+// "Destroy Route"
+route.delete('/:id', (req, res) => {
+    dogs.findByIdAndDelete(req.params.id, (err,deleteMsg) =>{
+        console.log(deleteMsg)
+        res.redirect("/dogs")
+
+    })
+    
+})
+
+// "Update Route"
+route.put('/:id', (req, res) => {
+    dogs.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedDog) => {
+        if(err){
+            return res.send(err)
+        }
+        console.log(updatedDog)
+        res.redirect("/dogs/" +req.params.id)
+    })  
 })
 
 route.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
@@ -121,29 +157,6 @@ route.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
 
     upload(req);
   
-})
-
-
-// "Destroy Route"
-route.delete('/:id', (req, res) => {
-    dogs.findByIdAndDelete(req.params.id, (err,deleteMsg) =>{
-        console.log(deleteMsg)
-        res.redirect("/dogs")
-
-    })
-    
-})
-
-
-// "Update Route"
-route.put('/:id', (req, res) => {
-    dogs.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedDog) => {
-        if(err){
-            return res.send(err)
-        }
-        console.log(updatedDog)
-        res.redirect("/dogs/" +req.params.id)
-    })  
 })
 
 module.exports=route
