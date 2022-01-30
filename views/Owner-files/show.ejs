@@ -15,31 +15,43 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand">Go to a new page</a>
+      <a class="navbar-brand">CODE PALS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="../">Home</a>
-          <a class="nav-link" href="../owners">PALs</a>
-          <a class="nav-link" href="../dogs">Dogs</a>
-          <a class="nav-link disabled">Login</a>
+          <a class="nav-link" href="../">HOME</a>
+          <a class="nav-link" href="../owners">PALS</a>
+          <a class="nav-link" href="../dogs">DOGS</a>
+          <a class="nav-link disabled">LOGIN</a>
         </div>
       </div>
     </div>
   </nav>
 
     <h1>Meet <%=owner.name%></h1>
-    <div>
-        <%=owner.hobbies%>
+    <img src="<%=owner.img%>" alt=""><br>
+    <div class= "info">
+        <b>PAL's Hobbies:</b> <%=owner.hobbies%><br>
         
-        <%=owner.tvShows%>
+        <b>PAL's favorite TV Shows:</b> <%=owner.tvShows%><br>
         
-        <%=owner.favoriteDogActivity%>
+        <b>PAL's favorite activity with their dog:</b> <%=owner.favoriteDogActivity%><br>
         
-        <img src="<%=owner.img%>" alt="">
+        
     </div>
+    <div class="buttons2">   
+      <button style="font-size:20px"><a href = "/owners">PALS's Page</a> <i class="fa fa-paw"></i></button>
+  </div> 
+  <div class="buttons1">
+      <button style="font-size:20px"><a href = "/owners/<%=owner.id%>/edit">Edit this PAL</a> <i class="fa fa-paw"></i></button>
+  </div>
+  <div class="buttons3">
+  <form action="/owners/<%=owner._id%>?_method=DELETE" method="POST">
+      <button style="font-size:20px">Delete this PAL <i class="fa fa-paw"></i></button>
+  </form>
+  </div>
     <a href="<%=owner._id%>/single-file">Upload Profile Picture</a>
 
         

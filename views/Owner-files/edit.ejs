@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Dogs</title>
+    <link href="/css/ownerEdit.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rammetto+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <title>Edit Dog</title>
 </head>
 <body>
-    <h1>Edit Dogs</h1>
-    <form action="/dogs-files/<%=dogs._id%>?_method=PUT" method="POST">
-
-
+    <h1>Edit <%=owner.name%></h1>
+    <form action="/owners/<%=owner._id%>?_method=PUT" method="POST">
+        <!--input for fullName-->
+        <p>found owner Id<%=id%></p>
+        PAL Name: <br>
+        <input type="text" name="name" value="<%=owner.name%>"
+        placeholder="add full name here">
+        <br> PAL Hobbies:
+        <br><input type="text" name="name" value="<%=owner.hobbbies%>"
+        placeholder="add hobbies">
+        <br> PAL Favorite TV Shows:
+        <br><input type="text" name="name" value="<%=owner.tvShows%>"
+        placeholder="add breed here">
+        <br>PAL's favorite activity with their dog
+        <input name="name" type="text">
+        <!--input for our submit-->
+        <br>
+        <button style="font-size:24px"> Edit PAL <i class="fa fa-paw"></i></button>
+    </form> 
+    <div class="buttons1">
+    <form action="/owners/<%=owner._id%>?_method=DELETE" method="POST">
+        <button style="font-size:20px">Delete this PAL <i class="fa fa-paw"></i></button>
+     </div>   
     </form>
+    <div class="buttons2">   
+        <button style="font-size:20px"><a href = "/dogs">Dog's Page</a> <i class="fa fa-paw"></i></button>
+    </div> 
 </body>
 </html>

@@ -1,8 +1,85 @@
+h1{
+    text-align: center;
+    font-family: 'Rammetto One', cursive;
+}
 body{
     font-family: 'Poppins', sans-serif;
     color: white;
     background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(3).png?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
-    font-size: 26px;
+    font-size: 20px;
+    text-align:center;
+}
+img{
+    display: flex;
+    height: 300px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info{
+    text-align: center;
+    background-color: rgba(255, 255, 255, .3);
+    border: 3px solid white;
+    width:fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttons1{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1558px;
+}
+.buttons1 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons1 button:hover{
+    background-color: whitesmoke;
+}
+.buttons2{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1558px;
+}
+.buttons2 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons2 button:hover{
+    background-color: whitesmoke;
+}
+.buttons3{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1570px;
+}
+.buttons3 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons3 button:hover{
+    background-color: whitesmoke;
+}
+.buttons4{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-start;
+    width: 1570px;
+}
+.buttons4 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons4 button:hover{
+    background-color: whitesmoke;
 }

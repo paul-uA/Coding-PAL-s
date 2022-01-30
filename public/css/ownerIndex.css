@@ -22,18 +22,29 @@ img{
     width: 250px
 }
 
-.float-containter{
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    
-}
-
-.float-child{
-    border: 3px solid white;
-    padding: 15px;
+.float-child {
+    border: 4px solid white;
+    padding: 15px;  
+    background-color: rgba(255, 255, 255, .3);
     margin-top: 50px;
-    
 }
-
+.float-container{
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+}
+.buttons{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1550px;
+}
+.buttons button{
+    color: black;
+    background-color: tomato;
+}
+.buttons button:hover{
+    background-color: whitesmoke;
+}
   
