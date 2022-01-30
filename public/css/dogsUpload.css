@@ -8,40 +8,17 @@ body{
     background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(3).png?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
-    font-size: 26px
-}
-.float-child {
-    border: 4px solid white;
-    padding: 15px;  
-    background-color: rgba(255, 255, 255, .3);
-    margin-top: 50px;
-}
-img{
-    height: 300px;
-    width: 250px;
-}
-.float-container{
-    display: flex;
-    justify-content:space-evenly;
+    font-size: 26px;
     text-align: center;
-    flex-wrap: wrap;
 }
-.buttons{
-    text-align:center;
-    display: flex;
-    padding: 3px;
-    justify-content: flex-end;
-    width: 1550px;
-}
-.buttons button{
+.button {
     color: white;
     background-color: tomato;
 }
-.buttons button:hover{
+.button:hover{
     background-color: whitesmoke;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 a{
-    color:white;
+    color: white;
 }
-

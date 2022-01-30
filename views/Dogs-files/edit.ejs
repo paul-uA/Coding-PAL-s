@@ -16,29 +16,30 @@
     <h1>Edit <%=dog.name%></h1>
     <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
         <!--input for fullName-->
-        <p>found Dog Id<%=id%></p>
         Dog Name: <br>
         <input type="text" name="name" value="<%=dog.name%>"
         placeholder="add full name here">
         <br> Dog Age:
-        <br><input type="text" name="name" value="<%=dog.age%>"
+        <br><input type="text" name="age" value="<%=dog.age%>"
         placeholder="add age here">
         <br> Dog Breed:
-        <br><input type="text" name="name" value="<%=dog.breed%>"
+        <br><input type="text" name="breed" value="<%=dog.breed%>"
         placeholder="add breed here">
         <br>Dog is fixed:
         <input name="Dog is fixed" type="checkbox"/>
         <!--input for our submit-->
         <br>
-        <button style="font-size:24px"> Edit Dog <i class="fa fa-paw"></i></button>
+        <div class="buttons3">
+        <button style="font-size:22px"> Edit Dog <i class="fa fa-paw"></i></button>
+        </div>
     </form> 
     <div class="buttons1">
     <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
-        <button style="font-size:20px">Delete this dog <i class="fa fa-paw"></i></button>
+        <button style="font-size:22px">Delete this dog <i class="fa fa-paw"></i></button>
      </div>   
     </form>
     <div class="buttons2">   
-        <button style="font-size:20px"><a href = "/dogs">Dog's Page</a> <i class="fa fa-paw"></i></button>
+        <button style="font-size:22px"><a href = "/dogs">Dog's Page</a> <i class="fa fa-paw"></i></button>
     </div> 
 </body>
 </html>
