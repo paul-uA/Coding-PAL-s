@@ -1,44 +1,28 @@
-h1 {
+h1{
     text-align: center;
-    font-family: 'Rammetto One', cursive;
+    font-size: 'Rammetto One', cursive;
 }
-
-.navbar{
-    font-size:18px;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
     color: white;
     background-image: url("https://github.com/l-Rich/project1-2048/blob/main/t%20(3).png?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
-    font-size: 26px;
-}
-img{
-    margin-left: auto;
-    margin-right: auto;
-    height: 250px;
-    width: 250px
-}
-
-.float-child {
-    border: 4px solid white;
-    padding: 15px;  
-    background-color: rgba(255, 255, 255, .3);
-    margin-top: 50px;
-}
-.float-container{
-    display: flex;
-    justify-content:space-evenly;
+    font-size: 20px;
     text-align: center;
+}
+.addButton button{
+    background-color: tomato;
+}
+.addButton button:hover{
+    background-color: whitesmoke;
 }
 .buttons{
     text-align:center;
     display: flex;
     padding: 3px;
     justify-content: flex-end;
-    width: 1550px;
+    width: 1580px;
 }
 .buttons button{
     color: black;
@@ -47,4 +31,12 @@ img{
 .buttons button:hover{
     background-color: whitesmoke;
 }
-  
+.form-input{
+    text-align: center;
+    background-color: rgba(255, 255, 255, .3);
+    border: 3px solid white;
+    width:fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}

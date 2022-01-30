@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    font-family: 'Rammetto One', cursive;
+    font-size: 'Rammetto One', cursive;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -11,29 +11,31 @@ body{
     font-size: 26px;
     text-align: center;
 }
-.addButton button{
-    background-color: tomato;
-    color: white;
-}
-.addButton button:hover{
-    background-color: whitesmoke;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.buttons{
+.buttons1{
     text-align:center;
     display: flex;
     padding: 3px;
     justify-content: flex-end;
-    width: 1599px;
+    width: 1558px;
 }
-.buttons button{
-    color: white;
+.buttons1 button{
+    color: black;
     background-color: tomato;
 }
-.buttons button:hover{
+.buttons1 button:hover{
     background-color: whitesmoke;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-a{
-    color: white;
+.buttons2{
+    text-align:center;
+    display: flex;
+    padding: 3px;
+    justify-content: flex-end;
+    width: 1558px;
+}
+.buttons2 button{
+    color: black;
+    background-color: tomato;
+}
+.buttons2 button:hover{
+    background-color: whitesmoke;
 }

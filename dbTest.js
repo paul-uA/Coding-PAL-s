@@ -11,25 +11,25 @@ mongoose.connect(MONGODB_URI, () => {
 
 const PALSinfo = [{
     name: "Paul",
-    hobbies: ['Video Games','Movies','Eating Food'],
-    tvShows: ['The Witcher','The Book of Boba Fett','Loki'],
+    hobbies: ['Video Games ','Movies ','Eating Food '],
+    tvShows: ['The Witcher ','The Book of Boba Fett ','Loki '],
     favoriteDogActivity:['Walking in the park', 'Sleeping','Playing Fetch'],
     dogs:[],
     img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/ProfilePaul.jpg?raw=true"
 },{
     name: "Addy",
-    hobbies: ['Watcing Tv','Walking around the Park',"Hanging out"],
-    tvShows: ['The Great','The Office',"Bob's Burger"],
-    favoriteDogActivity:['Walks', 'Playing catch','Going to Astros Games'], 
+    hobbies: ['Watching TV ','Walking around the Park ','Hanging out '],
+    tvShows: ['The Great ','The Office ',"Bob's Burger "],
+    favoriteDogActivity:['Walks ', 'Playing catch ','Going to Astros Games '], 
     dogs:[], 
     img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/Addy_Charlie.jpg?raw=true"
 },{
     name: "Lauren",
-    hobbies: ['Crafting','Watching Tv',"Playing the Sims"],
-    tvShows: ['Community','The Office',"Archer"],
-    favoriteDogActivity:['Playing Ball', 'Belly Rubs','Taking a Ride in the Car'],
+    hobbies: ['Crafting ','Watching Tv ',"Playing the Sims "],
+    tvShows: ['Community ','The Office ',"Archer "],
+    favoriteDogActivity:['Playing Ball ', 'Belly Rubs ','Taking a Ride in the Car' ],
     dogs:[],
-    img: "https://github.com/paul-uA/Coding-PAL-s/blob/main/pictures/CodingPalLauren.PNG?raw=true"
+    img: "https://github.com/l-Rich/project1-2048/blob/main/CodingPalLauren-1.png?raw=true"
 }]
 
 const dogInfo=[{
