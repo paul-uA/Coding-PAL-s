@@ -19,11 +19,12 @@ body{
     width: 1558px;
 }
 .buttons1 button{
-    color: black;
+    color: white;
     background-color: tomato;
 }
 .buttons1 button:hover{
     background-color: whitesmoke;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .buttons2{
     text-align:center;
@@ -33,9 +34,21 @@ body{
     width: 1558px;
 }
 .buttons2 button{
-    color: black;
+    color: white;
     background-color: tomato;
 }
 .buttons2 button:hover{
     background-color: whitesmoke;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.buttons3 button{
+    color: white;
+    background-color: tomato;
+}
+.buttons3 button:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+a{
+    color:white;
 }

@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    font-family: 'Rammetto One', cursive;
+    font-size: 'Rammetto One', cursive;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -11,26 +11,11 @@ body{
     font-size: 26px;
     text-align: center;
 }
-.addButton button{
-    background-color: tomato;
-    color: white;
-}
-.addButton button:hover{
-    background-color: whitesmoke;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.buttons{
-    text-align:center;
-    display: flex;
-    padding: 3px;
-    justify-content: flex-end;
-    width: 1580px;
-}
-.buttons button{
+.button {
     color: white;
     background-color: tomato;
 }
-.buttons button:hover{
+.button:hover{
     background-color: whitesmoke;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
