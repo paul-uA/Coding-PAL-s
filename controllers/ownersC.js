@@ -102,12 +102,13 @@ router.put('/:id/single-file', upload.single("imageUpload") ,(req, res) => {
                 console.log(err)
             }else{
             console.log(foundOwner)
+            res.redirect(`/owners/${id}`)
             }
         })
         // Result will be resolved value returned by Cloudinary upload promise- you can capture just the properties you want to construct a seeder object to pass to your DB processes.
-        res.redirect(`/owners/${id}`)
+        //res.redirect(`/owners/${id}`)
           } catch (err) {
-          console.log(err);
+           console.log(err);
           }
         }
 
