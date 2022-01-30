@@ -43,11 +43,12 @@ img{
     width: 1595px;
 }
 .buttons1 button{
-    color: black;
+    color: white;
     background-color: tomato;
 }
 .buttons1 button:hover{
     background-color: whitesmoke;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .buttons2{
@@ -63,6 +64,7 @@ img{
 }
 .buttons2 button:hover{
     background-color: whitesmoke;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .buttons3{
@@ -79,6 +81,7 @@ img{
 
 .buttons3 button:hover{
     background-color: whitesmoke;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .buttons4{
@@ -94,6 +97,7 @@ img{
 }
 .buttons4 button:hover{
     background-color: whitesmoke;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 a{
