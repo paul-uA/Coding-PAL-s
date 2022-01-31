@@ -14,27 +14,27 @@
     <title>Edit Dog</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Code-PAL's</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="http://localhost:3000/Code-Pals">Home</a>
-              <a class="nav-link" href="http://localhost:3000/dogs">Dogs</a>
-              <a class="nav-link" href="http://localhost:3000/Code-Pals">PAL's</a>
-              <a class="nav-link disabled">Log In</a>
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Code PAL's</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/code-pals">Home</a>
+          <a class="nav-link" href="/dogs">Dogs</a>
+          <a class="nav-link" href="/owners">PAL's</a>
+          <a class="nav-link disabled">Log In</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
     <h1>Edit <%=dog.name%></h1>
     <br>
     <br>
     <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
-        <!--input for fullName-->
+        
         Dog Name: <br>
         <input type="text" name="name" value="<%=dog.name%>"
         placeholder="add full name here">
@@ -46,7 +46,7 @@
         placeholder="add breed here">
         <br>Dog is fixed:
         <input name="Dog is fixed" type="checkbox"/>
-        <!--input for our submit-->
+        
         <br>
         
         <div class="buttons3">
