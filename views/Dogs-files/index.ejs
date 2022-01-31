@@ -36,7 +36,7 @@
         <% for (let i=0; i <dog.length; i++) { %> 
     
         <div class="float-child">
-            <div class="dogPics"><img src="<%=dog[i].img%>">
+            <div class="dogPics"><img src="<%=dog[i].img[0]%>">
             <br><a href="/dogs/<%=dog[i]._id%>">Meet <%= dog[i].name %></a></div>
         </div>
         <% } %> 

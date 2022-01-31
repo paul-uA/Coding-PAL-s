@@ -49,7 +49,7 @@ route.get('/:id/single-file', (req, res) => {
 
 
 // "Edit Route"
-route.get('/:id/edit', (req, res) => {
+route.get('/:id', (req, res) => {
     dogs.findById(req.params.id, (err, foundDog) =>{
     if(err) {
         return res.send(err)
@@ -96,7 +96,13 @@ route.delete('/:id', (req, res) => {
 })
 
 // "Update Route"
-route.put('/:id/edit', (req, res) => {
+route.put('/:id', (req, res) => {
+    console.log(req.body)
+    if (req.body.fixed === "on") {
+        req.body.fixed = true;
+      } else {
+        req.body.fixed = false;
+      }
     dogs.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedDog) => {
         if(err){
             return res.send(err)
