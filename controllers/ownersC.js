@@ -45,7 +45,7 @@ router.get('/:id/edit', (req, res) => {
         return res.send(err)
     }else{
         res.render("./Owner-files/edit.ejs",
-        {dog: foundOwner, id:req.params.id})
+        {owner: foundOwner, id:req.params.id})
     }
 })
 
