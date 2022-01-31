@@ -96,7 +96,7 @@ route.delete('/:id', (req, res) => {
 })
 
 // "Update Route"
-route.put('/:id', (req, res) => {
+route.put('/:id/edit', (req, res) => {
     dogs.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedDog) => {
         if(err){
             return res.send(err)
