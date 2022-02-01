@@ -49,7 +49,7 @@ route.get('/:id/single-file', (req, res) => {
 
 
 // "Edit Route"
-route.get('/:id', (req, res) => {
+route.get('/:id/edit', (req, res) => {
     dogs.findById(req.params.id, (err, foundDog) =>{
     if(err) {
         return res.send(err)
